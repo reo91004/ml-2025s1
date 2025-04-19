@@ -609,23 +609,6 @@ def main():
     print("서포트 벡터 수:")
     print(f"   - 선형 SVM: {linear_svm.support_vectors.shape[0]}개")
     print(f"   - 비선형 SVM: {kernel_svm.support_vectors.shape[0]}개")
-    
-    # MNIST 특성과 적합성
-    print("\n===== MNIST 데이터셋과 SVM 적합성 =====")
-    print("1. MNIST 데이터 특성:")
-    print("   - 784차원(28x28 픽셀) 특성 공간")
-    print("   - 숫자 간 비선형적인 차이 존재")
-    print("   - 다양한 필체로 인한 클래스 내 분산")
-    print("2. 선형 SVM 적합성:")
-    print("   - 간단한 구현과 빠른 예측")
-    print("   - 일부 숫자 쌍(예: 1과 7)은 선형으로 잘 분리됨")
-    print("   - 복잡한 숫자 쌍(예: 3과 8)은 선형으로 분리하기 어려움")
-    print("3. 비선형 SVM 적합성:")
-    print("   - RBF 커널이 픽셀 간 지역적 관계를 잘 포착")
-    print("   - 필체 변화에 대한 유연한 결정 경계 생성")
-    print("   - 복잡한 숫자 패턴도 높은 정확도로 분류 가능")
-    print(f"   - 성능 향상: {(kernel_acc - linear_acc)*100:.2f}% 개선")
-
 
 if __name__ == "__main__":
     main()
